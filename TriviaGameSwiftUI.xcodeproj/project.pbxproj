@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		8B7A486C2A094583003C380E /* TriviaGameSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A486B2A094583003C380E /* TriviaGameSwiftUIApp.swift */; };
 		8B7A486E2A094583003C380E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A486D2A094583003C380E /* ContentView.swift */; };
-		8B7A48702A094588003C380E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A486F2A094588003C380E /* Assets.xcassets */; };
 		8B7A48742A094588003C380E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A48732A094588003C380E /* Preview Assets.xcassets */; };
+		8B7A487B2A094826003C380E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7A487A2A094826003C380E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B7A48682A094583003C380E /* TriviaGameSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriviaGameSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7A486B2A094583003C380E /* TriviaGameSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaGameSwiftUIApp.swift; sourceTree = "<group>"; };
 		8B7A486D2A094583003C380E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8B7A486F2A094588003C380E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B7A48712A094588003C380E /* TriviaGameSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TriviaGameSwiftUI.entitlements; sourceTree = "<group>"; };
 		8B7A48732A094588003C380E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B7A487A2A094826003C380E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/TriviaGameApp-main/TriviaGame/Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			children = (
 				8B7A486B2A094583003C380E /* TriviaGameSwiftUIApp.swift */,
 				8B7A486D2A094583003C380E /* ContentView.swift */,
-				8B7A486F2A094588003C380E /* Assets.xcassets */,
 				8B7A48712A094588003C380E /* TriviaGameSwiftUI.entitlements */,
+				8B7A487A2A094826003C380E /* Assets.xcassets */,
 				8B7A48722A094588003C380E /* Preview Content */,
 			);
 			path = TriviaGameSwiftUI;
@@ -128,7 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B7A48742A094588003C380E /* Preview Assets.xcassets in Resources */,
-				8B7A48702A094588003C380E /* Assets.xcassets in Resources */,
+				8B7A487B2A094826003C380E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
