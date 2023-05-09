@@ -27,7 +27,13 @@ struct QuestionView: View {
                     .bold()
                     .foregroundColor(.gray)
             }
-        }
+            
+            AnswerRow(answer: Answer(category: "", type: "", difficulty: "", question: "", correctAnswer: "", incorrectAnswers: [""], text: "false", isCorrect: true))
+            AnswerRow(answer: Answer(category: "", type: "", difficulty: "", question: "", correctAnswer: "", incorrectAnswers: [""], text: "true", isCorrect: false))
+            
+            PrimaryButton(text: "Next")
+//            Spacer()
+         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(.horizontal)
         .edgesIgnoringSafeArea(.all)
