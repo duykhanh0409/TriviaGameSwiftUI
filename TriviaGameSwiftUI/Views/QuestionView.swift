@@ -8,30 +8,39 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var triviaManager: TriviaManager
     var body: some View {
         VStack(spacing: 40) {
             HStack{
                 Text("Trivia Game")
                     .lilacTitle()
                 Spacer()
-                Text("1 out of 10")
+                Text("\(triviaManager.index + 1) out of \(triviaManager.length)")
                     .font(.title3)
                     .fontWeight(.heavy)
                     .foregroundColor(Color("AccentColor"))
             }
-           ProgressBar(progress: 80)
+            ProgressBar(progress: triviaManager.progress)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text("Android versions are named in alphabetical order.")
+                Text(triviaManager.question)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(.gray)
             }
             
-            AnswerRow(answer: Answer(category: "", type: "", difficulty: "", question: "", correctAnswer: "", incorrectAnswers: [""], text: "false", isCorrect: true))
-            AnswerRow(answer: Answer(category: "", type: "", difficulty: "", question: "", correctAnswer: "", incorrectAnswers: [""], text: "true", isCorrect: false))
+            ForEach(triviaManager.answerChoices, id: \.id) { answer in
+                AnswerRow(answer: answer)
+                    .environmentObject(triviaManager)
+            }
             
-            PrimaryButton(text: "Next")
+            Button {
+                triviaManager.goToNextQuestion()
+            } label: {
+                PrimaryButton(text: "Next",backgroundColor: triviaManager.answerSelected ? Color("AccentColor") : Color(hue: 1.0, saturation: 0.0, brightness: 0.564, opacity: 0.327))
+            }
+            .disabled(!triviaManager.answerSelected)
+
 //            Spacer()
          }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -44,5 +53,6 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
         QuestionView()
+            .environmentObject(TriviaManager())
     }
 }

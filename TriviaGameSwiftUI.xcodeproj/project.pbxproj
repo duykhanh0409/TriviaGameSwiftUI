@@ -19,6 +19,7 @@
 		8B7A488C2A0A02BC003C380E /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A488B2A0A02BC003C380E /* AnswerRow.swift */; };
 		8B7A488E2A0A54CC003C380E /* TriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A488D2A0A54CC003C380E /* TriviaView.swift */; };
 		8B7A48902A0A55BD003C380E /* TriviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A488F2A0A55BD003C380E /* TriviaModel.swift */; };
+		8B7A48922A0A597D003C380E /* TriviaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7A48912A0A597D003C380E /* TriviaManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		8B7A488B2A0A02BC003C380E /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		8B7A488D2A0A54CC003C380E /* TriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaView.swift; sourceTree = "<group>"; };
 		8B7A488F2A0A55BD003C380E /* TriviaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaModel.swift; sourceTree = "<group>"; };
+		8B7A48912A0A597D003C380E /* TriviaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		8B7A486A2A094583003C380E /* TriviaGameSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8B7A48912A0A597D003C380E /* TriviaManager.swift */,
 				8B7A48882A09F44D003C380E /* Model */,
 				8B7A487F2A094A4F003C380E /* Views */,
 				8B7A487C2A094964003C380E /* Components */,
@@ -191,6 +194,7 @@
 				8B7A488E2A0A54CC003C380E /* TriviaView.swift in Sources */,
 				8B7A48812A094BB2003C380E /* PrimaryButton.swift in Sources */,
 				8B7A488C2A0A02BC003C380E /* AnswerRow.swift in Sources */,
+				8B7A48922A0A597D003C380E /* TriviaManager.swift in Sources */,
 				8B7A486E2A094583003C380E /* ContentView.swift in Sources */,
 				8B7A488A2A09F473003C380E /* Answer.swift in Sources */,
 				8B7A48902A0A55BD003C380E /* TriviaModel.swift in Sources */,

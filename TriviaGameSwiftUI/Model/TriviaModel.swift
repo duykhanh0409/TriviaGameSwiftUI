@@ -11,15 +11,18 @@ struct TriviaModel: Decodable {
     var results: [Result]
     
     struct Result: Decodable, Identifiable {
-        var id: UUID{ 
+        var id: UUID{
             UUID()
         }
-        var category: String
-        var type: String
-        var difficulty: String
-        var question: String
-        var correctAnswer: String
-        var incorrectAnswer: [String]
+        let category, type, difficulty, question: String
+        let correctAnswer: String
+        let incorrectAnswers: [String]
+
+        enum CodingKeys: String, CodingKey {
+            case category, type, difficulty, question
+            case correctAnswer = "correct_answer"
+            case incorrectAnswers = "incorrect_answers"
+        }
         
         var formattedQuestion: AttributedString {
             do{
@@ -29,11 +32,12 @@ struct TriviaModel: Decodable {
                 return ""
             }
         }
+    
         
         var answer:[Answer]{
             do{
                 let correct = [Answer(text: try AttributedString(markdown: correctAnswer), isCorrect: true)]
-                let incorrects = try incorrectAnswer.map({ answer in
+                let incorrects = try incorrectAnswers.map({ answer in
                     Answer(text: try AttributedString(markdown: answer), isCorrect: false)
                 })
                 let allAnswer = correct + incorrects
